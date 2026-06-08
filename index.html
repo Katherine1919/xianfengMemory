@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拾光源点·先锋社区记忆智能体</title>
+  <meta name="description" content="面向展厅互动屏、学生路演和社区试点展示的先锋社区 AI 记忆系统静态 Demo。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" aria-label="主导航">
+    <div class="nav-shell">
+      <button class="brand-mark" type="button" data-section="home" aria-label="返回首页">
+        <span class="brand-stamp">拾光源点</span>
+        <span class="brand-title">先锋社区记忆智能体</span>
+      </button>
+      <nav class="section-nav" aria-label="页面分区导航">
+        <button class="nav-link is-active" type="button" data-section="home">首页</button>
+        <button class="nav-link" type="button" data-section="map">地图</button>
+        <button class="nav-link" type="button" data-section="timeline">时间轴</button>
+        <button class="nav-link" type="button" data-section="stories">故事库</button>
+        <button class="nav-link" type="button" data-section="submit">上传记忆</button>
+        <button class="nav-link" type="button" data-section="agent">拾光仔</button>
+        <button class="nav-link" type="button" data-section="passport">儿童任务</button>
+        <button class="nav-link" type="button" data-section="admin">管理审核</button>
+        <button class="nav-link" type="button" data-section="about">关于项目</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="page-section is-active" aria-labelledby="home-title">
+      <div class="hero section-inner">
+        <div class="hero-copy">
+          <p class="kicker">新岭南数字街区博物馆</p>
+          <h1 id="home-title">把市桥的记忆，重新点亮</h1>
+          <p class="hero-lede">和拾光仔一起，探索先锋大街与前锋大街的老街故事、家庭记忆与城市变迁。</p>
+          <div class="hero-actions" aria-label="首页快捷操作">
+            <button class="btn btn-primary" type="button" data-section="map">开始探索地图</button>
+            <button class="btn btn-secondary" type="button" data-section="submit">上传一段记忆</button>
+            <button class="btn btn-ghost" type="button" data-section="agent">和拾光仔聊天</button>
+          </div>
+          <div class="stats-grid" aria-label="项目关键数据">
+            <article class="stat-card">
+              <strong>16 公顷</strong>
+              <span>社区范围</span>
+            </article>
+            <article class="stat-card">
+              <strong>10.26 公顷</strong>
+              <span>传统村落保护范围</span>
+            </article>
+            <article class="stat-card">
+              <strong>6 个</strong>
+              <span>历史阶段</span>
+            </article>
+            <article class="stat-card">
+              <strong>10+</strong>
+              <span>记忆节点</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="记忆地图视觉卡片">
+          <div class="museum-card">
+            <div class="map-plate">
+              <span class="street-line street-line-a"></span>
+              <span class="street-line street-line-b"></span>
+              <span class="street-line street-line-c"></span>
+              <span class="water-line"></span>
+              <span class="hero-dot dot-a"></span>
+              <span class="hero-dot dot-b"></span>
+              <span class="hero-dot dot-c"></span>
+              <span class="hero-label label-a">先锋大街</span>
+              <span class="hero-label label-b">前锋大街</span>
+              <span class="hero-label label-c">先锋小学</span>
+              <span class="hero-label label-d">古井</span>
+              <span class="hero-label label-e">蚝壳墙</span>
+            </div>
+            <div class="photo-card photo-card-one">
+              <span>老照片 1978</span>
+              <strong>骑楼街面</strong>
+            </div>
+            <div class="photo-card photo-card-two">
+              <span>口述记忆</span>
+              <strong>市桥白卖</strong>
+            </div>
+            <div class="exhibit-note">记忆探针已点亮</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="kicker">Project Abilities</p>
+          <h2>项目能力概览</h2>
+        </div>
+        <div class="ability-grid">
+          <article class="ability-card">
+            <span class="ability-icon">图</span>
+            <h3>地图式记忆探针</h3>
+            <p>把先锋大街、前锋大街、古井和蚝壳墙做成可点击的街区记忆点。</p>
+          </article>
+          <article class="ability-card">
+            <span class="ability-icon">时</span>
+            <h3>时间轴档案</h3>
+            <p>用北宋、明清、民国到当代的线索，看见市桥老城如何生长。</p>
+          </article>
+          <article class="ability-card">
+            <span class="ability-icon">述</span>
+            <h3>居民故事采集</h3>
+            <p>让长者、家庭、学生和志愿者一起把口述记忆变成社区档案。</p>
+          </article>
+          <article class="ability-card">
+            <span class="ability-icon">问</span>
+            <h3>AI 问答讲述</h3>
+            <p>拾光仔用模拟问答演示未来如何连接地图、故事和时间轴。</p>
+          </article>
+          <article class="ability-card">
+            <span class="ability-icon">章</span>
+            <h3>儿童探索任务</h3>
+            <p>用积分、印章和任务，把本地历史学习变成可持续的探索。</p>
+          </article>
+          <article class="ability-card">
+            <span class="ability-icon">审</span>
+            <h3>管理审核与导出</h3>
+            <p>社区管理员可审核、拒绝、删除和导出 Demo 数据。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="map" class="page-section" aria-labelledby="map-title">
+      <div class="section-inner">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="kicker">Memory Map</p>
+            <h2 id="map-title">记忆地图</h2>
+          </div>
+          <p>不用真实地图 API，用手绘街区面板呈现先锋社区的“记忆探针”。</p>
+        </div>
+        <div class="map-layout">
+          <div class="hand-map" aria-label="先锋社区手绘记忆地图">
+            <div class="map-texture"></div>
+            <div class="map-road road-main"></div>
+            <div class="map-road road-side-a"></div>
+            <div class="map-road road-side-b"></div>
+            <div class="map-road road-side-c"></div>
+            <div class="map-river">市桥水脉</div>
+            <div class="map-district district-one">鱼骨状街巷</div>
+            <div class="map-district district-two">老番禺生活圈</div>
+            <div id="mapNodes" class="map-nodes"></div>
+          </div>
+          <aside id="placeDetail" class="place-detail" aria-live="polite">
+            <p class="kicker">Place Detail</p>
+            <h3>点击地图上的记忆点</h3>
+            <p>选择先锋大街、先锋小学、蚝壳墙等地点，查看历史阶段、记忆类型和相关故事。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="page-section" aria-labelledby="timeline-title">
+      <div class="section-inner">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="kicker">Timeline</p>
+            <h2 id="timeline-title">时间轴</h2>
+          </div>
+          <p>从北宋石板桥到当代老城市新活力，串起街区随时间变化的线索。</p>
+        </div>
+        <div id="timelineList" class="timeline-list"></div>
+      </div>
+    </section>
+
+    <section id="stories" class="page-section" aria-labelledby="stories-title">
+      <div class="section-inner">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="kicker">Story Archive</p>
+            <h2 id="stories-title">故事库</h2>
+          </div>
+          <p id="storyCountText" aria-live="polite">正在加载故事。</p>
+        </div>
+        <div class="filter-bar" aria-label="故事分类筛选">
+          <button class="filter-chip is-active" type="button" data-category="全部">全部</button>
+          <button class="filter-chip" type="button" data-category="建筑记忆">建筑记忆</button>
+          <button class="filter-chip" type="button" data-category="学校记忆">学校记忆</button>
+          <button class="filter-chip" type="button" data-category="美食记忆">美食记忆</button>
+          <button class="filter-chip" type="button" data-category="家庭记忆">家庭记忆</button>
+          <button class="filter-chip" type="button" data-category="社区事件">社区事件</button>
+          <button class="filter-chip" type="button" data-category="非遗文化">非遗文化</button>
+          <button class="filter-chip" type="button" data-category="商业记忆">商业记忆</button>
+        </div>
+        <div id="activeStoryFilter" class="active-filter" hidden></div>
+        <div id="storyGrid" class="story-grid"></div>
+      </div>
+    </section>
+
+    <section id="submit" class="page-section" aria-labelledby="submit-title">
+      <div class="section-inner">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="kicker">Submit Memory</p>
+            <h2 id="submit-title">上传记忆</h2>
+          </div>
+          <p>Demo 版只保存文字数据到浏览器本地，审核通过后会进入公开故事库。</p>
+        </div>
+        <div class="submit-layout">
+          <form id="memoryForm" class="memory-form" novalidate>
+            <div class="form-row two-col">
+              <label>
+                <span>记忆标题 *</span>
+                <input id="memoryTitle" name="title" type="text" placeholder="例如：外婆讲的先锋小学放学路" autocomplete="off">
+                <small class="field-error" data-error-for="title"></small>
+              </label>
+              <label>
+                <span>讲述人</span>
+                <input id="storyteller" name="storyteller" type="text" placeholder="例如：陈阿姨 / 学生小林">
+              </label>
+            </div>
+            <div class="form-row two-col">
+              <label>
+                <span>年龄段</span>
+                <select id="ageGroup" name="ageGroup">
+                  <option>儿童</option>
+                  <option>青年</option>
+                  <option>成年</option>
+                  <option>长者</option>
+                </select>
+              </label>
+              <label>
+                <span>时间线索</span>
+                <input id="timeLabel" name="timeLabel" type="text" placeholder="例如：上世纪八十年代 / 当代">
+              </label>
+            </div>
+            <div class="form-row two-col">
+              <label>
+                <span>地点 *</span>
+                <select id="placeSelect" name="placeId">
+                  <option value="">请选择地点</option>
+                </select>
+                <small class="field-error" data-error-for="placeId"></small>
+              </label>
+              <label>
+                <span>记忆分类 *</span>
+                <select id="categorySelect" name="category">
+                  <option value="">请选择分类</option>
+                  <option>建筑记忆</option>
+                  <option>学校记忆</option>
+                  <option>美食记忆</option>
+                  <option>家庭记忆</option>
+                  <option>社区事件</option>
+                  <option>非遗文化</option>
+                  <option>商业记忆</option>
+                </select>
+                <small class="field-error" data-error-for="category"></small>
+              </label>
+            </div>
+            <label>
+              <span>故事内容 *</span>
+              <textarea id="storyText" name="fullText" rows="7" placeholder="请写下这段记忆，可以是看到的街巷、听到的声音、闻到的味道，也可以是家人讲过的故事。"></textarea>
+              <small class="field-error" data-error-for="fullText"></small>
+            </label>
+            <div class="form-row two-col">
+              <label>
+                <span>标签</span>
+                <input id="tagsInput" name="tags" type="text" placeholder="用逗号分隔，例如：老街,家庭,放学路">
+              </label>
+              <label>
+                <span>公开范围</span>
+                <select id="visibility" name="visibility">
+                  <option>公开展示</option>
+                  <option>社区可见</option>
+                  <option>仅管理员可见</option>
+                  <option>私密存档</option>
+                </select>
+              </label>
+            </div>
+            <div class="upload-placeholder" aria-label="文件上传占位区">
+              <strong>照片 / 音频 / 视频上传占位区</strong>
+              <p>Demo 版暂不上传真实文件，正式版可接入 Supabase Storage。</p>
+            </div>
+            <label class="consent-line">
+              <input id="consent" name="consent" type="checkbox">
+              <span>我确认已获得讲述人授权，同意按所选公开范围保存这段记忆。*</span>
+            </label>
+            <small class="field-error" data-error-for="consent"></small>
+            <div id="formMessage" class="form-message" aria-live="polite"></div>
+            <button class="btn btn-primary" type="submit">提交到待审核区</button>
+          </form>
+
+          <aside class="submit-guide">
+            <p class="kicker">Collection Guide</p>
+            <h3>一段好记忆，可以很小</h3>
+            <p>可以是一口市桥白卖的味道、一面蚝壳墙的纹理、一条放学路，也可以是长辈讲起的前锋十八巷。</p>
+            <ul>
+              <li>写清地点，方便连接地图。</li>
+              <li>写清时间线索，方便进入时间轴。</li>
+              <li>尊重隐私，敏感内容先选择“仅管理员可见”。</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="agent" class="page-section" aria-labelledby="agent-title">
+      <div class="section-inner">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="kicker">AI Agent Chat</p>
+            <h2 id="agent-title">拾光仔</h2>
+          </div>
+          <p>拾光仔是温暖的本地记忆导览员，Demo 版使用本地模拟回答。</p>
+        </div>
+        <div class="chat-layout">
+          <div class="chat-panel">
+            <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+            <form id="chatForm" class="chat-form">
+              <label class="sr-only" for="chatInput">输入想问拾光仔的问题</label>
+              <input id="chatInput" type="text" placeholder="问问拾光仔：市桥白卖是什么？">
+              <button class="btn btn-primary" type="submit">发送</button>
+            </form>
+            <p class="demo-note">Demo 版使用模拟回答，正式版可接入真实 AI API 与社区记忆数据库。</p>
+          </div>
+          <aside class="suggestion-panel">
+            <h3>建议问题</h3>
+            <div id="questionSuggestions" class="suggestion-grid"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="passport" class="page-section" aria-labelledby="passport-title">
+      <div class="section-inner">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="kicker">Children's Memory Passport</p>
+            <h2 id="passport-title">儿童记忆通行证</h2>
+          </div>
+          <p>用积分、印章和任务，带孩子把先锋社区当成一座可以探索的街区博物馆。</p>
+        </div>
+        <div class="passport-layout">
+          <aside class="passport-card" aria-label="儿童记忆通行证">
+            <span class="passport-number">XF-PASSPORT-2026</span>
+            <h3>先锋小小记忆员</h3>
+            <p>完成任务，点亮属于你的社区记忆路线。</p>
+            <div class="passport-stats">
+              <div>
+                <strong id="pointsValue">0</strong>
+                <span>当前积分</span>
+              </div>
+              <div>
+                <strong id="stampValue">0</strong>
+                <span>已获印章</span>
+              </div>
+            </div>
+            <div id="stampWall" class="stamp-wall" aria-label="已获得印章"></div>
+          </aside>
+          <div id="questList" class="quest-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="admin" class="page-section" aria-labelledby="admin-title">
+      <div class="section-inner">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="kicker">Admin Review Demo</p>
+            <h2 id="admin-title">管理员审核 Demo</h2>
+          </div>
+          <p>演示用入口，不做真实安全。密码：123456。</p>
+        </div>
+        <div id="adminGate" class="admin-gate">
+          <h3>Demo 管理入口</h3>
+          <label for="adminPassword">请输入演示密码：123456</label>
+          <div class="admin-login-row">
+            <input id="adminPassword" type="password" inputmode="numeric" autocomplete="off">
+            <button class="btn btn-primary" id="adminUnlockBtn" type="button">进入后台</button>
+          </div>
+          <p id="adminMessage" class="form-message" aria-live="polite"></p>
+        </div>
+
+        <div id="adminPanel" class="admin-panel" hidden>
+          <div class="admin-toolbar">
+            <div class="admin-tabs" role="tablist" aria-label="审核状态">
+              <button class="admin-tab is-active" type="button" data-admin-tab="pending">待审核</button>
+              <button class="admin-tab" type="button" data-admin-tab="approved">已通过</button>
+              <button class="admin-tab" type="button" data-admin-tab="rejected">已拒绝</button>
+            </div>
+            <div class="export-actions">
+              <button class="btn btn-secondary" type="button" id="exportJsonBtn">导出 JSON</button>
+              <button class="btn btn-secondary" type="button" id="exportCsvBtn">导出 CSV</button>
+              <button class="btn btn-ghost danger" type="button" id="resetDemoBtn">重置 Demo 数据</button>
+            </div>
+          </div>
+          <div id="adminList" class="admin-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="page-section" aria-labelledby="about-title">
+      <div class="section-inner about-shell">
+        <div class="section-heading">
+          <p class="kicker">About Project</p>
+          <h2 id="about-title">关于《拾光源点·先锋社区记忆智能体》</h2>
+          <p>这是一个面向展厅互动屏、学生比赛路演和社区试点前期展示的高完成度静态原型。</p>
+        </div>
+        <div class="about-grid">
+          <article class="about-card">
+            <h3>为什么做这个项目</h3>
+            <p>老街记忆常常散落在家庭相册、饭桌闲谈和街坊口述里。这个 Demo 把居民故事、儿童学习和社区共创放到同一个界面里，让看不见的记忆重新被整理、被看见、被传下去。</p>
+          </article>
+          <article class="about-card">
+            <h3>为什么是先锋社区</h3>
+            <p>先锋大街、前锋大街和市桥老城保存着广府文化的街巷肌理。这里有鱼骨状街巷、骑楼街面、学校生活和老番禺的商业味道，适合成为一座可步行、可讲述、可共创的街区博物馆。</p>
+          </article>
+          <article class="about-card">
+            <h3>为什么用 AI</h3>
+            <p>AI 可以帮助整理口述记忆、回答孩子的问题、把故事连接到地图与时间轴，也能生成儿童探索任务。Demo 版不接真实 AI API，只用本地模拟回答展示未来方向。</p>
+          </article>
+          <article class="about-card">
+            <h3>儿童、长者与社区共创</h3>
+            <p>儿童负责探索，长者负责讲述，家庭负责连接，社区负责审核。四类角色一起参与，社区记忆才不会停留在墙上的展板，而会进入日常生活。</p>
+          </article>
+          <article class="about-card">
+            <h3>数据伦理与隐私保护</h3>
+            <p>每段记忆都需要授权同意，可以选择公开范围，并经过管理员审核。正式版还应加入账号权限、敏感信息保护、撤回机制和更完整的社区审核流程。</p>
+          </article>
+        </div>
+        <div class="roadmap">
+          <h3>后续路线图</h3>
+          <ol>
+            <li><span>01</span>HTML Demo</li>
+            <li><span>02</span>React Web App</li>
+            <li><span>03</span>Supabase 数据库</li>
+            <li><span>04</span>Supabase Storage 文件存储</li>
+            <li><span>05</span>真实 AI API</li>
+            <li><span>06</span>展厅互动屏</li>
+            <li><span>07</span>移动端 App</li>
+            <li><span>08</span>AR 老街导览</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="storyModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="关闭故事详情" data-close-modal>×</button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

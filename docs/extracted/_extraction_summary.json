@@ -1,0 +1,98 @@
+[
+  {
+    "index": 1,
+    "file": "1先锋大街前锋大街保护发展规划(文本）.pdf",
+    "pages": 80,
+    "chars": 44828,
+    "empty_or_low_text_pages": [
+      57,
+      76,
+      77,
+      78
+    ],
+    "empty_count": 4,
+    "status": "ok"
+  },
+  {
+    "index": 2,
+    "file": "2先锋大街前锋大街保护发展规划(说明书）.pdf",
+    "pages": 121,
+    "chars": 53567,
+    "empty_or_low_text_pages": [],
+    "empty_count": 0,
+    "status": "ok"
+  },
+  {
+    "index": 3,
+    "file": "4先锋大街前锋大街保护发展规划（宣传册）.pdf",
+    "pages": 31,
+    "chars": 12056,
+    "empty_or_low_text_pages": [],
+    "empty_count": 0,
+    "status": "ok"
+  },
+  {
+    "index": 4,
+    "file": "先锋社区智能体项目提案.pdf",
+    "pages": 6,
+    "chars": 4211,
+    "empty_or_low_text_pages": [],
+    "empty_count": 0,
+    "status": "ok"
+  },
+  {
+    "index": 5,
+    "file": "市桥先锋大街历史信息搜集.pdf",
+    "pages": 9,
+    "chars": 17193,
+    "empty_or_low_text_pages": [],
+    "empty_count": 0,
+    "status": "ok"
+  },
+  {
+    "index": 6,
+    "file": "市桥先锋大街历史信息搜集ChatGPT.pdf",
+    "pages": 9,
+    "chars": 17193,
+    "empty_or_low_text_pages": [],
+    "empty_count": 0,
+    "status": "ok"
+  },
+  {
+    "index": 7,
+    "file": "市桥复心计划2025.pdf",
+    "pages": 88,
+    "chars": 32314,
+    "empty_or_low_text_pages": [
+      5,
+      13,
+      19,
+      23,
+      28,
+      37,
+      46,
+      47,
+      52,
+      83
+    ],
+    "empty_count": 10,
+    "status": "ok"
+  },
+  {
+    "index": 8,
+    "file": "拾光源点•先锋社区 1.0.pdf",
+    "pages": 22,
+    "chars": 1761,
+    "empty_or_low_text_pages": [
+      1,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "empty_count": 7,
+    "status": "ok"
+  }
+]
