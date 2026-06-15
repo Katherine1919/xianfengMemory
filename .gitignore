@@ -1,3 +1,9 @@
 .DS_Store
 source_materials:/
 *.pdf
+js/supabase-config.local.js
+.env
+.env.*
+assets/images/source-extracted/
+assets/images/source-contact-sheet*
+assets/images/source-priority-contact-sheet*

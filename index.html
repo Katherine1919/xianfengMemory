@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>拾光源点·先锋社区记忆智能体</title>
   <meta name="description" content="面向展厅互动屏、学生路演和社区试点展示的先锋社区 AI 记忆系统静态 Demo。">
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stitch-reference.css">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -32,103 +34,106 @@
 
   <main id="main">
     <section id="home" class="page-section is-active" aria-labelledby="home-title">
-      <div class="hero section-inner">
-        <div class="hero-copy">
-          <p class="kicker">新岭南数字街区博物馆</p>
-          <h1 id="home-title">把市桥的记忆，重新点亮</h1>
-          <p class="hero-lede">和拾光仔一起，探索先锋大街与前锋大街的老街故事、家庭记忆与城市变迁。</p>
-          <div class="hero-actions" aria-label="首页快捷操作">
-            <button class="btn btn-primary" type="button" data-section="map">开始探索地图</button>
-            <button class="btn btn-secondary" type="button" data-section="submit">上传一段记忆</button>
-            <button class="btn btn-ghost" type="button" data-section="agent">和拾光仔聊天</button>
-          </div>
-          <div class="stats-grid" aria-label="项目关键数据">
-            <article class="stat-card">
-              <strong>16 公顷</strong>
-              <span>社区范围</span>
-            </article>
-            <article class="stat-card">
-              <strong>10.26 公顷</strong>
-              <span>传统村落保护范围</span>
-            </article>
-            <article class="stat-card">
-              <strong>6 个</strong>
-              <span>历史阶段</span>
-            </article>
-            <article class="stat-card">
-              <strong>10+</strong>
-              <span>记忆节点</span>
-            </article>
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-label="记忆地图视觉卡片">
-          <div class="museum-card">
-            <div class="map-plate">
-              <span class="street-line street-line-a"></span>
-              <span class="street-line street-line-b"></span>
-              <span class="street-line street-line-c"></span>
-              <span class="water-line"></span>
-              <span class="hero-dot dot-a"></span>
-              <span class="hero-dot dot-b"></span>
-              <span class="hero-dot dot-c"></span>
-              <span class="hero-label label-a">先锋大街</span>
-              <span class="hero-label label-b">前锋大街</span>
-              <span class="hero-label label-c">先锋小学</span>
-              <span class="hero-label label-d">古井</span>
-              <span class="hero-label label-e">蚝壳墙</span>
-            </div>
-            <div class="photo-card photo-card-one">
-              <span>老照片 1978</span>
-              <strong>骑楼街面</strong>
-            </div>
-            <div class="photo-card photo-card-two">
-              <span>口述记忆</span>
-              <strong>市桥白卖</strong>
-            </div>
-            <div class="exhibit-note">记忆探针已点亮</div>
-          </div>
+      <div class="home-masthead section-inner">
+        <div class="home-title-block">
+          <p class="home-kicker">NEW LINGNAN DIGITAL MUSEUM</p>
+          <h1 id="home-title">拾光成忆，源点新生</h1>
+          <p class="home-lede">跨越千年，从石板墟市到当代社区。我们用数字科技点亮市桥先锋大街与前锋大街的集体记忆。</p>
         </div>
       </div>
 
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="kicker">Project Abilities</p>
-          <h2>项目能力概览</h2>
+      <section class="home-chronicle section-inner" aria-labelledby="home-chronicle-title">
+        <h2 id="home-chronicle-title" class="sr-only">先锋社区六时期记忆轴</h2>
+
+        <div id="homePeriodRail" class="home-period-rail" role="tablist" aria-label="先锋社区六个历史时期">
+          <button class="home-period-node is-active" type="button" role="tab" aria-selected="true" aria-controls="homePeriodDetail" data-home-period="tl-song">
+            <span class="home-node-era">NORTHERN SONG</span>
+            <span class="home-node-dot" aria-hidden="true"></span>
+            <strong>北宋</strong>
+            <span class="home-node-summary">石板桥线索</span>
+          </button>
+          <button class="home-period-node" type="button" role="tab" aria-selected="false" aria-controls="homePeriodDetail" data-home-period="tl-mingqing">
+            <span class="home-node-era">MING &amp; QING</span>
+            <span class="home-node-dot" aria-hidden="true"></span>
+            <strong>明清</strong>
+            <span class="home-node-summary">水陆贸易</span>
+          </button>
+          <button class="home-period-node" type="button" role="tab" aria-selected="false" aria-controls="homePeriodDetail" data-home-period="tl-republic">
+            <span class="home-node-era">REPUBLIC</span>
+            <span class="home-node-dot" aria-hidden="true"></span>
+            <strong>民国</strong>
+            <span class="home-node-summary">骑楼街面</span>
+          </button>
+          <button class="home-period-node" type="button" role="tab" aria-selected="false" aria-controls="homePeriodDetail" data-home-period="tl-early-prc">
+            <span class="home-node-era">EARLY PRC</span>
+            <span class="home-node-dot" aria-hidden="true"></span>
+            <strong>建国初期</strong>
+            <span class="home-node-summary">红砖街巷</span>
+          </button>
+          <button class="home-period-node" type="button" role="tab" aria-selected="false" aria-controls="homePeriodDetail" data-home-period="tl-reform">
+            <span class="home-node-era">REFORM ERA</span>
+            <span class="home-node-dot" aria-hidden="true"></span>
+            <strong>改革开放</strong>
+            <span class="home-node-summary">市井烟火</span>
+          </button>
+          <button class="home-period-node" type="button" role="tab" aria-selected="false" aria-controls="homePeriodDetail" data-home-period="tl-today">
+            <span class="home-node-era">CONTEMPORARY</span>
+            <span class="home-node-dot" aria-hidden="true"></span>
+            <strong>当代</strong>
+            <span class="home-node-summary">社区共创</span>
+          </button>
         </div>
-        <div class="ability-grid">
-          <article class="ability-card">
-            <span class="ability-icon">图</span>
-            <h3>地图式记忆探针</h3>
-            <p>把先锋大街、前锋大街、古井和蚝壳墙做成可点击的街区记忆点。</p>
-          </article>
-          <article class="ability-card">
-            <span class="ability-icon">时</span>
-            <h3>时间轴档案</h3>
-            <p>用北宋、明清、民国到当代的线索，看见市桥老城如何生长。</p>
-          </article>
-          <article class="ability-card">
-            <span class="ability-icon">述</span>
-            <h3>居民故事采集</h3>
-            <p>让长者、家庭、学生和志愿者一起把口述记忆变成社区档案。</p>
-          </article>
-          <article class="ability-card">
-            <span class="ability-icon">问</span>
-            <h3>AI 问答讲述</h3>
-            <p>拾光仔用模拟问答演示未来如何连接地图、故事和时间轴。</p>
-          </article>
-          <article class="ability-card">
-            <span class="ability-icon">章</span>
-            <h3>儿童探索任务</h3>
-            <p>用积分、印章和任务，把本地历史学习变成可持续的探索。</p>
-          </article>
-          <article class="ability-card">
-            <span class="ability-icon">审</span>
-            <h3>管理审核与导出</h3>
-            <p>社区管理员可审核、拒绝、删除和导出 Demo 数据。</p>
-          </article>
+      </section>
+
+      <section id="homePeriodDetail" class="home-period-detail section-inner" aria-live="polite" aria-labelledby="homePeriodTitle">
+        <div class="home-detail-copy">
+          <p id="homePeriodEyebrow" class="home-detail-eyebrow">时期 01 · 北宋</p>
+          <h2 id="homePeriodTitle">北宋 · 石板桥线索与墟市开端</h2>
+          <p id="homePeriodDescription">拾光源点资料把先锋记忆开场放在北宋石板桥，但桥址和文献仍需补证。</p>
+          <div id="homePeriodTags" class="home-detail-tags" aria-label="时期标签">
+            <span>北宋</span><span>石板桥</span><span>待考证</span>
+          </div>
+          <p id="homePeriodSource" class="home-detail-source">档案提示：该时期为待考证线索，展示时保留资料边界。</p>
+          <div class="home-detail-actions">
+            <button id="homeViewMap" class="btn btn-primary" type="button">记忆地图定位</button>
+            <button id="homeViewStories" class="btn btn-ghost" type="button">进入故事馆</button>
+          </div>
         </div>
-      </div>
+        <div id="homeStoryPreview" class="home-story-preview" aria-label="时期故事预览"></div>
+      </section>
+
+      <section class="home-guide section-inner" aria-labelledby="home-guide-title">
+        <div class="home-guide-heading">
+          <p class="home-kicker">SERVICE GUIDE</p>
+          <h2 id="home-guide-title">使用指南 · How to Use</h2>
+        </div>
+        <div class="home-guide-grid">
+          <button class="home-guide-card" type="button" data-section="map">
+            <span class="home-guide-number river">01</span>
+            <strong>探索与检索</strong>
+            <p>通过首页的时间轴或交互式地图，快速定位街区记忆。</p>
+          </button>
+          <button class="home-guide-card" type="button" data-section="submit">
+            <span class="home-guide-number brick">02</span>
+            <strong>贡献与激励</strong>
+            <p>上传您的老照片或文字记忆，参与“儿童记忆护照”计划赢取印章。</p>
+          </button>
+          <button class="home-guide-card" type="button" data-section="agent">
+            <span class="home-guide-number gold">03</span>
+            <strong>对话拾光仔</strong>
+            <p>点击“拾光仔”唤起 AI 助手，为您讲述老街背后不为人知的秘密。</p>
+          </button>
+        </div>
+      </section>
+
+      <section class="home-stats" aria-label="项目关键数据">
+        <div class="section-inner home-stats-grid">
+          <article><strong class="brick">16 公顷</strong><span>社区核心范围</span><p>覆盖先锋及前锋大街核心地带</p></article>
+          <article><strong class="gold">10.26 公顷</strong><span>传统村落保护区</span><p>珍贵的历史肌理与文化原点</p></article>
+          <article><strong class="river">6 个</strong><span>关键历史断代</span><p>从宋代至当代的时空叙事</p></article>
+          <article><strong class="brick">10+</strong><span>数字化记忆探针</span><p>AI 赋能的社区共创交互终端</p></article>
+        </div>
+      </section>
     </section>
 
     <section id="map" class="page-section" aria-labelledby="map-title">
@@ -205,7 +210,7 @@
             <p class="kicker">Submit Memory</p>
             <h2 id="submit-title">上传记忆</h2>
           </div>
-          <p>Demo 版只保存文字数据到浏览器本地，审核通过后会进入公开故事库。</p>
+          <p>Demo 版可把文字和小型媒体文件保存到浏览器本地，审核通过后会进入公开故事库。</p>
         </div>
         <div class="submit-layout">
           <form id="memoryForm" class="memory-form" novalidate>
@@ -278,9 +283,27 @@
                 </select>
               </label>
             </div>
-            <div class="upload-placeholder" aria-label="文件上传占位区">
-              <strong>照片 / 音频 / 视频上传占位区</strong>
-              <p>Demo 版暂不上传真实文件，正式版可接入 Supabase Storage。</p>
+            <div class="media-upload-group" aria-label="照片视频音频收集区">
+              <div class="media-upload-heading">
+                <strong>照片 / 视频 / 音频</strong>
+                <p>可选上传。Demo 会把小文件保存在本机浏览器里，适合收集会议回忆、街坊口述和现场照片。</p>
+              </div>
+              <div class="media-input-grid">
+                <label class="media-input-card">
+                  <span>照片</span>
+                  <input id="photoUpload" name="photos" type="file" accept="image/*" multiple>
+                </label>
+                <label class="media-input-card">
+                  <span>视频</span>
+                  <input id="videoUpload" name="videos" type="file" accept="video/*" multiple>
+                </label>
+                <label class="media-input-card">
+                  <span>音频</span>
+                  <input id="audioUpload" name="audios" type="file" accept="audio/*" multiple>
+                </label>
+              </div>
+              <div id="mediaPreview" class="media-preview" aria-live="polite"></div>
+              <small class="field-error" data-error-for="media"></small>
             </div>
             <label class="consent-line">
               <input id="consent" name="consent" type="checkbox">
@@ -456,6 +479,8 @@
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 </body>

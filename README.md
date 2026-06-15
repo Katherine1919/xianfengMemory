@@ -128,6 +128,33 @@ Demo 使用以下 localStorage keys：
 
 如果 localStorage 为空，页面会使用 seed data 正常运行。如果 localStorage 数据损坏，脚本会自动恢复为空数组，避免页面崩溃。
 
+## Supabase Storage 配置
+
+当前 Demo 已接入 Supabase Storage 的浏览器端上传逻辑，但默认不开启，避免把项目 URL 或 key 写进仓库。
+
+1. 在 Supabase 项目里创建 Storage bucket：
+
+   - Bucket name: `xianfeng-memory-media`
+   - Demo 建议先设为 Public bucket，方便故事详情页直接显示照片、视频和音频。
+
+2. 在 `js/supabase-config.js` 填入你的项目配置：
+
+   ```js
+   window.XIANFENG_SUPABASE_CONFIG = {
+     enabled: true,
+     url: "https://你的项目.ref.supabase.co",
+     anonKey: "你的 Supabase anon key",
+     storageBucket: "xianfeng-memory-media",
+     publicBucket: true
+   };
+   ```
+
+3. 如果 bucket 不设为 public，需要后续把页面改成 signed URL 模式。当前静态 Demo 使用 public URL 展示媒体。
+
+4. 当前实现使用 Supabase 标准上传，适合照片、小音频和小视频。大于 6MB 的视频，后续应升级到 TUS 断点续传。
+
+5. 管理审核仍然使用 `localStorage` 保存文字、审核状态和媒体 URL。正式版还需要 Supabase Database 承接记忆表、审核表和权限表。
+
 ## 后续升级路线
 
 - React Web App
@@ -146,7 +173,8 @@ Demo 使用以下 localStorage keys：
 
 ## 已知限制
 
-- Demo 版不上传真实图片、音频或视频。
+- 未开启 Supabase 时，Demo 版只把小型图片、音频或视频保存在当前浏览器本地。
+- 开启 Supabase Storage 后，媒体文件会上传到 bucket，但文字和审核状态仍保存在 localStorage。
 - Demo 版不做真实账号登录与权限安全。
 - Demo 版 AI 问答来自 `js/data.js` 的本地 mock 数据。
 - Demo 版地图为 CSS 手绘风面板，不代表真实地理坐标。
