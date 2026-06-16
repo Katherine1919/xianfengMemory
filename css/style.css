@@ -747,8 +747,121 @@ ol {
 }
 
 .place-detail {
-  padding: var(--space-5);
-  background: rgba(255, 249, 240, 0.92);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+  padding: 42px 42px 38px;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 246, 0.96), rgba(255, 249, 240, 0.88)),
+    rgba(255, 249, 240, 0.94);
+  box-shadow: 0 22px 56px rgba(67, 39, 22, 0.08);
+}
+
+.place-detail::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--gold), rgba(178, 68, 50, 0.68), transparent);
+}
+
+.place-detail .kicker {
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  font-weight: 950;
+  letter-spacing: 0.24em;
+}
+
+.place-detail-head h3 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 2.3vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+.place-detail-head p {
+  max-width: 15em;
+  margin: 0;
+  color: rgba(44, 44, 44, 0.66);
+  font-family: var(--font-serif);
+  font-size: 1.16rem;
+  font-weight: 650;
+  line-height: 1.82;
+}
+
+.place-detail-list {
+  gap: 0;
+  margin: 32px 0 28px;
+  border-top: 1px solid rgba(80, 50, 30, 0.1);
+}
+
+.place-detail-row {
+  display: grid;
+  grid-template-columns: minmax(92px, 0.48fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(80, 50, 30, 0.1);
+}
+
+.place-detail-row dt {
+  color: rgba(44, 44, 44, 0.54);
+  font-size: 0.92rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.place-detail-row dd {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.04rem;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.place-period-list span {
+  display: block;
+}
+
+.place-period-list span + span {
+  margin-top: 3px;
+}
+
+.place-detail-tags {
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.place-detail-tags .tag-pill {
+  min-height: 32px;
+  padding: 6px 13px;
+  background: rgba(251, 244, 232, 0.92);
+  color: rgba(44, 44, 44, 0.82);
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.place-detail-actions {
+  margin-top: 2px;
+}
+
+.place-detail-actions .btn {
+  width: min(100%, 230px);
+  min-height: 54px;
+  justify-content: center;
+  border-radius: 0;
+  font-size: 1.02rem;
+  letter-spacing: 0.04em;
 }
 
 .detail-list,
@@ -764,6 +877,12 @@ ol {
   display: grid;
   grid-template-columns: 94px 1fr;
   gap: var(--space-2);
+}
+
+.place-detail .place-detail-row {
+  grid-template-columns: minmax(92px, 0.48fr) minmax(0, 1fr);
+  gap: 18px;
+  padding: 16px 0;
 }
 
 dt {

@@ -201,26 +201,30 @@ function openPlaceDetail(placeId) {
 
   detail.innerHTML = `
     <p class="kicker">Place Detail</p>
-    <h3>${escapeHTML(place.name)}</h3>
-    <p>${escapeHTML(place.intro)}</p>
-    <dl class="detail-list">
-      <div>
+    <div class="place-detail-head">
+      <h3>${escapeHTML(place.name)}</h3>
+      <p>${escapeHTML(place.intro)}</p>
+    </div>
+    <dl class="detail-list place-detail-list">
+      <div class="place-detail-row">
         <dt>所属历史阶段</dt>
-        <dd>${escapeHTML(place.period)}</dd>
+        <dd class="place-period-list">${renderPlacePeriodLines(place.period)}</dd>
       </div>
-      <div>
+      <div class="place-detail-row">
         <dt>记忆类型</dt>
         <dd>${escapeHTML(place.type)}</dd>
       </div>
-      <div>
+      <div class="place-detail-row">
         <dt>相关故事数量</dt>
         <dd>${place.storyCount} 条</dd>
       </div>
     </dl>
-    <div class="tag-row">
+    <div class="tag-row place-detail-tags">
       ${place.tags.map((tag) => `<span class="tag-pill">${escapeHTML(tag)}</span>`).join("")}
     </div>
-    <button class="btn btn-primary" type="button" id="viewPlaceStories">查看相关故事</button>
+    <div class="place-detail-actions">
+      <button class="btn btn-primary" type="button" id="viewPlaceStories">查看相关故事</button>
+    </div>
   `;
 
   document.querySelectorAll(".memory-point").forEach((button) => {
@@ -230,6 +234,15 @@ function openPlaceDetail(placeId) {
   document.getElementById("viewPlaceStories").addEventListener("click", () => {
     filterStoriesByPlace(placeId);
   });
+}
+
+function renderPlacePeriodLines(period = "") {
+  const periods = String(period)
+    .split("/")
+    .map((item) => item.trim())
+    .filter(Boolean);
+  if (!periods.length) return "待补充";
+  return periods.map((item) => `<span>${escapeHTML(item)}</span>`).join("");
 }
 
 function filterStoriesByPlace(placeId) {
@@ -953,6 +966,15 @@ function normalizeStory(story) {
 }
 
 function renderStoryCover(story, className, caption) {
+  const uploadedPhoto = getPrimaryPhotoAttachment(story);
+  if (uploadedPhoto) {
+    return `
+      <figure class="${className} story-source-image">
+        <img src="${escapeHTML(uploadedPhoto.src)}" alt="${escapeHTML(story.title || story.placeName)}上传照片" loading="lazy">
+      </figure>
+    `;
+  }
+
   if (story.sourceImage) {
     return `
       <figure class="${className} story-source-image">
@@ -966,6 +988,16 @@ function renderStoryCover(story, className, caption) {
       <span>${escapeHTML(caption)}</span>
     </div>
   `;
+}
+
+function getPrimaryPhotoAttachment(story) {
+  const attachments = Array.isArray(story.mediaAttachments) ? story.mediaAttachments : [];
+  const photo = attachments.find((item) => item && item.type === "photo" && (item.publicUrl || item.dataUrl));
+  if (!photo) return null;
+  return {
+    src: photo.publicUrl || photo.dataUrl,
+    name: photo.name || "上传照片"
+  };
 }
 
 function ensureStoryArchiveControls() {
