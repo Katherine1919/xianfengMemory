@@ -143,18 +143,33 @@
             <p class="kicker">Memory Map</p>
             <h2 id="map-title">记忆地图</h2>
           </div>
-          <p>不用真实地图 API，用手绘街区面板呈现先锋社区的“记忆探针”。</p>
         </div>
         <div class="map-layout">
           <div class="hand-map" aria-label="先锋社区手绘记忆地图">
-            <div class="map-texture"></div>
-            <div class="map-road road-main"></div>
-            <div class="map-road road-side-a"></div>
-            <div class="map-road road-side-b"></div>
-            <div class="map-road road-side-c"></div>
-            <div class="map-river">市桥水脉</div>
-            <div class="map-district district-one">鱼骨状街巷</div>
-            <div class="map-district district-two">老番禺生活圈</div>
+            <svg class="street-map-svg heritage-route-map" viewBox="0 0 1000 680" role="img" aria-label="先锋社区岭南记忆路线图" preserveAspectRatio="none">
+              <g class="memory-routes memory-route-shadow">
+                <path d="M140 150C178 174 214 184 267 174S292 177 310 190C340 210 393 229 450 265"/>
+                <path d="M220 313C294 315 379 309 450 265"/>
+                <path d="M220 313C232 376 278 389 280 435S336 472 390 490C430 503 474 462 540 394"/>
+                <path d="M390 490C458 493 528 508 630 503S722 460 780 422"/>
+                <path d="M540 394C620 382 704 438 780 422"/>
+                <path d="M450 265C491 237 528 219 563 167S594 143 620 136C692 119 754 131 830 163"/>
+                <path d="M450 265C521 251 580 273 638 312S694 326 710 238C733 224 746 255 730 326"/>
+                <path d="M730 326C751 363 759 398 780 422"/>
+                <path d="M180 462C209 449 242 440 280 435"/>
+              </g>
+              <g class="memory-routes">
+                <path d="M140 150C178 174 214 184 267 174S292 177 310 190C340 210 393 229 450 265"/>
+                <path d="M220 313C294 315 379 309 450 265"/>
+                <path d="M220 313C232 376 278 389 280 435S336 472 390 490C430 503 474 462 540 394"/>
+                <path d="M390 490C458 493 528 508 630 503S722 460 780 422"/>
+                <path d="M540 394C620 382 704 438 780 422"/>
+                <path d="M450 265C491 237 528 219 563 167S594 143 620 136C692 119 754 131 830 163"/>
+                <path d="M450 265C521 251 580 273 638 312S694 326 710 238C733 224 746 255 730 326"/>
+                <path d="M730 326C751 363 759 398 780 422"/>
+                <path d="M180 462C209 449 242 440 280 435"/>
+              </g>
+            </svg>
             <div id="mapNodes" class="map-nodes"></div>
           </div>
           <aside id="placeDetail" class="place-detail" aria-live="polite">
@@ -210,7 +225,6 @@
             <p class="kicker">Submit Memory</p>
             <h2 id="submit-title">上传记忆</h2>
           </div>
-          <p>Demo 版可把文字和小型媒体文件保存到浏览器本地，审核通过后会进入公开故事库。</p>
         </div>
         <div class="submit-layout">
           <form id="memoryForm" class="memory-form" novalidate>
@@ -335,7 +349,7 @@
             <p class="kicker">AI Agent Chat</p>
             <h2 id="agent-title">拾光仔</h2>
           </div>
-          <p>拾光仔是温暖的本地记忆导览员，Demo 版使用本地模拟回答。</p>
+          <p>拾光仔是温暖的本地记忆导览员</p>
         </div>
         <div class="chat-layout">
           <div class="chat-panel">
@@ -393,7 +407,6 @@
             <p class="kicker">Admin Review Demo</p>
             <h2 id="admin-title">管理员审核 Demo</h2>
           </div>
-          <p>演示用入口，不做真实安全。密码：123456。</p>
         </div>
         <div id="adminGate" class="admin-gate">
           <h3>Demo 管理入口</h3>

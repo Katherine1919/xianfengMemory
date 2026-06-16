@@ -392,7 +392,6 @@ function openStoryDetail(storyId) {
       ${renderStoryDetailSection("历史依据", story.historicalBasis)}
       ${renderStoryDetailSection("空间观察", story.spatialDetail)}
       ${renderStoryDetailSection("互动提问", story.visitorPrompt)}
-      ${renderMediaArchiveSection(story.mediaAttachments)}
       <section class="story-detail-section story-detail-info">
         <h3>基本信息</h3>
         <dl class="modal-details">
@@ -402,16 +401,9 @@ function openStoryDetail(storyId) {
           <div><dt>讲述人</dt><dd>${escapeHTML(story.storyteller)}</dd></div>
           <div><dt>公开范围</dt><dd>${escapeHTML(story.visibility)}</dd></div>
           <div><dt>来源类型</dt><dd>${escapeHTML(story.sourceType)}</dd></div>
-          <div><dt>来源文件</dt><dd>${escapeHTML(story.sourceFile)}</dd></div>
-          <div><dt>来源页码</dt><dd>${escapeHTML(story.sourcePage === null || story.sourcePage === undefined ? "未定位页码" : story.sourcePage)}</dd></div>
-          <div><dt>资料说明</dt><dd>${escapeHTML(story.sourceNote)}</dd></div>
-          <div><dt>是否需核对</dt><dd>${story.needsVerification ? "需人工核对" : "暂不需要"}</dd></div>
-          <div><dt>缺失资料</dt><dd>${escapeHTML(story.missingInfo || "无")}</dd></div>
-          <div><dt>媒体附件</dt><dd>${escapeHTML(story.mediaSummary || buildMediaSummary(story.mediaAttachments || []))}</dd></div>
         </dl>
       </section>
     </div>
-    ${story.missingInfo && story.missingInfo !== "无" ? `<p class="missing-info-note"><strong>资料不足：</strong>${escapeHTML(story.missingInfo)}</p>` : ""}
     <div class="story-detail-footer">
       <div class="tag-row">
         ${story.tags.map((tag) => `<span class="tag-pill">${escapeHTML(tag)}</span>`).join("")}
