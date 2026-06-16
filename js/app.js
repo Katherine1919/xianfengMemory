@@ -103,8 +103,8 @@ function renderHomePeriod(periodId) {
   document.getElementById("homePeriodDescription").textContent = item.description;
   document.getElementById("homePeriodTags").innerHTML = item.tags.slice(0, 3).map((tag) => `<span>${escapeHTML(tag)}</span>`).join("");
   document.getElementById("homePeriodSource").textContent = item.needsVerification
-    ? "档案提示：该时期包含待补证线索，展示时保留资料边界。"
-    : `档案依据：${item.sourceNote.replace(/^来源：/, "")}`;
+    ? "线索状态：该时期仍有待补证内容。"
+    : "线索状态：已整理为社区记忆展示线索。";
 
   renderHomeStoryPreview(item);
   detail.classList.remove("is-switching");
@@ -129,6 +129,15 @@ function renderHomeStoryPreview(item) {
       <em>打开档案 ↗</em>
     </button>
   `);
+
+  if (item.detailImage) {
+    storyCards.unshift(`
+      <article class="home-story-card home-period-image-card">
+        <img src="${escapeHTML(item.detailImage)}" alt="${escapeHTML(item.title)}" loading="lazy">
+        <span>${escapeHTML(item.detailImageLabel || "当代运营图像")}</span>
+      </article>
+    `);
+  }
 
   if (storyCards.length < 2) {
     storyCards.push(`
@@ -176,7 +185,7 @@ function renderMapNodes() {
   const mapNodes = document.getElementById("mapNodes");
   if (!mapNodes) return;
 
-  mapNodes.innerHTML = PLACES.map((place) => `
+  mapNodes.innerHTML = getVisiblePlaces().map((place) => `
     <button
       class="memory-point"
       type="button"
@@ -265,15 +274,25 @@ function renderTimeline() {
 
   timelineList.innerHTML = TIMELINE_ITEMS.map((item, index) => `
     <article class="timeline-item">
-      <div class="timeline-marker">${String(index + 1).padStart(2, "0")}</div>
+      <div class="timeline-marker" aria-hidden="true">${String(index + 1).padStart(2, "0")}</div>
       <div class="timeline-content">
-        <p class="kicker">${escapeHTML(item.theme)}</p>
-        <h3>${escapeHTML(item.period)}</h3>
-        <p>${escapeHTML(item.clue)}</p>
-        <div class="tag-row">
+        <div class="timeline-card-head">
+          <p class="kicker">${escapeHTML(item.theme)}</p>
+          <span class="timeline-era">${escapeHTML(item.period)}</span>
+        </div>
+        <h3>${escapeHTML(item.title)}</h3>
+        <p class="timeline-clue">${escapeHTML(item.clue)}</p>
+        <div class="timeline-meta">
+          <span>${escapeHTML(item.needsVerification ? "待补证线索" : "已整理线索")}</span>
+          <span>${escapeHTML(item.relatedStoryIds.length)} 条相关故事</span>
+        </div>
+        <div class="tag-row timeline-tags">
           ${item.tags.map((tag) => `<span class="tag-pill">${escapeHTML(tag)}</span>`).join("")}
         </div>
-        <button class="btn btn-secondary" type="button" data-timeline-place="${item.placeId}">查看相关故事</button>
+        <div class="timeline-card-footer">
+          <span>${escapeHTML(item.needsVerification ? "线索状态：仍需继续补证" : "线索状态：已整理为展示线索")}</span>
+          <button class="btn btn-secondary" type="button" data-timeline-place="${item.placeId}">查看相关故事</button>
+        </div>
       </div>
     </article>
   `).join("");
@@ -290,7 +309,7 @@ function renderStories(filter = "全部") {
   const activeStoryFilter = document.getElementById("activeStoryFilter");
   if (!storyGrid) return;
 
-  ensureStoryArchiveControls();
+  document.getElementById("storyArchiveTools")?.remove();
 
   const publicStories = getPublicStories();
   let visibleStories = [...publicStories];
@@ -911,7 +930,7 @@ function initModalEvents() {
 function populatePlaceSelect() {
   const placeSelect = document.getElementById("placeSelect");
   if (!placeSelect) return;
-  placeSelect.insertAdjacentHTML("beforeend", PLACES.map((place) => `
+  placeSelect.insertAdjacentHTML("beforeend", getVisiblePlaces().map((place) => `
     <option value="${place.id}">${escapeHTML(place.name)}</option>
   `).join(""));
 }
@@ -919,7 +938,15 @@ function populatePlaceSelect() {
 function getPublicStories() {
   return [...STORIES, ...getApprovedStories()]
     .map(normalizeStory)
-    .filter((story) => story.reviewStatus === "approved" && story.visibility !== "私密存档" && story.visibility !== "仅管理员可见");
+    .filter((story) => story.reviewStatus === "approved" && story.visibility !== "私密存档" && story.visibility !== "仅管理员可见")
+    .filter((story) => {
+      const place = PLACES.find((item) => item.id === story.placeId);
+      return !place || place.isHidden !== true;
+    });
+}
+
+function getVisiblePlaces() {
+  return PLACES.filter((place) => place.isHidden !== true);
 }
 
 function normalizeStory(story) {
@@ -957,7 +984,7 @@ function normalizeStory(story) {
     imageStyle: story.imageStyle && story.imageStyle !== "submitted" ? story.imageStyle : "oral-history",
     sourceImage: story.sourceImage || STORY_SOURCE_IMAGES[story.id] || "",
     imageCaption: story.sourceImage || STORY_SOURCE_IMAGES[story.id]
-      ? `来源素材：${story.sourceFile || "项目资料"}${story.sourcePage ? `，${story.sourcePage}` : ""}`
+      ? "社区记忆影像"
       : story.imageCaption || `${placeName}记忆封面`,
     colorTheme: story.colorTheme || "community",
     mediaAttachments: Array.isArray(story.mediaAttachments) ? story.mediaAttachments : [],

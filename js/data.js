@@ -128,13 +128,13 @@ const KNOWLEDGE_FACTS = [
   {
     "id": "fact-food",
     "topic": "地方美食",
-    "fact": "市桥白卖、广式腊味、姜埋奶、菊花糕、薄饼、娥姐粉果等被资料列为传统美食或传统技艺线索。",
+    "fact": "市桥白卖、广式腊味、姜撞奶、菊花糕、薄饼、娥姐粉果等被资料列为传统美食或传统技艺线索。",
     "sourceNote": "来源：2说明书第49页；拾光源点第3页",
     "needsVerification": true,
     "tags": [
       "市桥白卖",
       "广式腊味",
-      "姜埋奶"
+      "姜撞奶"
     ]
   },
   {
@@ -162,13 +162,14 @@ const KNOWLEDGE_FACTS = [
   },
   {
     "id": "fact-vision",
-    "topic": "规划定位",
-    "fact": "规划将先锋社区定位为老城市新活力的番禺新样本、宜居社区、街区博物馆和广府文化体验街区。",
-    "sourceNote": "来源：4宣传册第19页",
+    "topic": "当代运营",
+    "fact": "拾光源点资料提出约3300平方米校园旧址更新，保留教学楼教室格局，以30-70平方米小尺度模块化空间承接成长工场、艺文生活和乐龄邻里。",
+    "sourceNote": "来源：拾光源点•先锋社区 1.0.pdf，第11-14页",
     "needsVerification": false,
     "tags": [
-      "老城市新活力",
-      "街区博物馆"
+      "校园新生",
+      "成长工场",
+      "乐龄邻里"
     ]
   }
 ];
@@ -194,8 +195,7 @@ const PLACES = [
     "relatedStoryIds": [
       "story-007",
       "story-008",
-      "story-027",
-      "story-030"
+      "story-027"
     ],
     "x": 22,
     "y": 46,
@@ -209,7 +209,7 @@ const PLACES = [
       "青砖",
       "社区生活"
     ],
-    "storyCount": 4
+    "storyCount": 3
   },
   {
     "id": "qianfeng-street",
@@ -231,8 +231,7 @@ const PLACES = [
     "relatedStoryIds": [
       "story-004",
       "story-013",
-      "story-027",
-      "story-030"
+      "story-027"
     ],
     "x": 54,
     "y": 58,
@@ -246,7 +245,7 @@ const PLACES = [
       "主街",
       "商业活力轴"
     ],
-    "storyCount": 4
+    "storyCount": 3
   },
   {
     "id": "qianfeng-lane-18",
@@ -361,6 +360,7 @@ const PLACES = [
   {
     "id": "old-well",
     "name": "古井",
+    "isHidden": true,
     "type": "历史环境要素",
     "address": "塘边大街三巷6号旁；前锋大街五巷11号北侧",
     "shortIntro": "规划列出2处古井，可作为公共景观和生活记忆节点。",
@@ -537,9 +537,7 @@ const PLACES = [
       "入口",
       "导览"
     ],
-    "relatedStoryIds": [
-      "story-030"
-    ],
+    "relatedStoryIds": [],
     "x": 83,
     "y": 24,
     "sourceNote": "来源：拾光源点•先锋社区 1.0.pdf，第2页；4宣传册第19页",
@@ -552,7 +550,7 @@ const PLACES = [
       "入口",
       "导览"
     ],
-    "storyCount": 1
+    "storyCount": 0
   },
   {
     "id": "song-bridge-clue",
@@ -781,28 +779,28 @@ const TIMELINE_ITEMS = [
   {
     "id": "tl-today",
     "period": "当代",
-    "title": "拾光源点与老城市新活力",
-    "description": "规划提出宜居社区、街区博物馆、广府文化体验街区；拾光源点面向儿童、乐龄、青年和亲子家庭。",
+    "title": "校园新生与社区共创",
+    "description": "拾光源点资料提出约3300平方米校园旧址更新，保留教室格局，导入成长工场、艺文生活、乐龄邻里、社区花园和活动广场。",
     "relatedPlaces": [
-      "old-city-gate",
-      "old-city-new-life",
       "xianfeng-school"
     ],
     "relatedStoryIds": [
       "story-016",
-      "story-029",
-      "story-030"
+      "story-029"
     ],
     "tags": [
       "当代",
-      "老城市新活力",
-      "街区博物馆"
+      "校园新生",
+      "成长工场",
+      "乐龄邻里"
     ],
-    "sourceNote": "来源：4宣传册第19-22页；拾光源点第4、11页",
+    "sourceNote": "来源：拾光源点•先锋社区 1.0.pdf，第11页",
     "needsVerification": false,
-    "theme": "拾光源点与老城市新活力",
-    "clue": "规划提出宜居社区、街区博物馆、广府文化体验街区；拾光源点面向儿童、乐龄、青年和亲子家庭。",
-    "placeId": "old-city-gate"
+    "theme": "校园新生与社区共创",
+    "clue": "总建筑面积约3300平方米，30-70平方米模块化教室空间，连接青少年教育、艺文生活、社区食集、健康康养与日常活动。",
+    "placeId": "xianfeng-school",
+    "detailImage": "assets/images/timeline-contemporary-campus.jpg",
+    "detailImageLabel": "拾光源点 1.0 · 校园新生"
   },
   {
     "id": "tl-future",
@@ -813,7 +811,6 @@ const TIMELINE_ITEMS = [
       "old-city-gate"
     ],
     "relatedStoryIds": [
-      "story-030"
     ],
     "tags": [
       "未来路线",
@@ -1159,7 +1156,7 @@ const STORIES = [
     "colorTheme": "water-blue",
     "excerpt": "水边生活不只在河涌，也在井旁。规划列出古井2处，并建议设置标识牌、整治周边环境，保护材质、砌筑形式和水质。",
     "fullText": "规划列出古井2处，并建议设置标识牌、整治周边环境，保护材质、砌筑形式和水质。两口古井分别位于塘边大街三巷和前锋大街五巷，可作为公共景观和生活记忆节点。给孩子和游客的问题是：如果给古井旁加一块牌，你最想写哪三个问题？依据《保护发展规划说明书》第48页古井地址表，以及《规划文本》第19页古井保护要求。",
-    "visibility": "公开展示",
+    "visibility": "仅管理员可见",
     "reviewStatus": "approved",
     "sourceNote": "官方规划资料：2先锋大街前锋大街保护发展规划(说明书）.pdf，第48页",
     "sourceRef": "2先锋大街前锋大街保护发展规划(说明书）.pdf 第48页",
@@ -1196,7 +1193,7 @@ const STORIES = [
     "colorTheme": "water-blue",
     "excerpt": "一口井旁的小型公共景观节点。该地址被列为两处古井之一，规划建议古井不宜覆盖，并保持原有色彩、材质、砌筑形式。",
     "fullText": "该地址被列为两处古井之一，规划建议古井不宜覆盖，并保持原有色彩、材质、砌筑形式。位于塘边大街三巷旁，街名和古井共同提示水边生活尺度。给孩子和游客的问题是：这口井旁边适合放座椅、故事牌还是儿童观察任务？依据《保护发展规划说明书》第48页和《规划文本》第19页。",
-    "visibility": "公开展示",
+    "visibility": "仅管理员可见",
     "reviewStatus": "approved",
     "sourceNote": "官方规划资料：2先锋大街前锋大街保护发展规划(说明书）.pdf，第48页",
     "sourceRef": "2先锋大街前锋大街保护发展规划(说明书）.pdf 第48页",
@@ -1233,7 +1230,7 @@ const STORIES = [
     "colorTheme": "water-blue",
     "excerpt": "五巷里的水与宅线索。该地址被列为两处古井之一，可与前锋大街五巷18、20号传统民居线索组成支巷路线。",
     "fullText": "该地址被列为两处古井之一，可与前锋大街五巷18、20号传统民居线索组成支巷路线。位于前锋大街五巷，适合观察古井、内院、花岗岩条石铺地和传统民居之间的关系。给孩子和游客的问题是：沿五巷走一遍，哪些地方还看得出老宅和水的关系？依据《保护发展规划说明书》第48页古井地址表。",
-    "visibility": "公开展示",
+    "visibility": "仅管理员可见",
     "reviewStatus": "approved",
     "sourceNote": "官方规划资料：2先锋大街前锋大街保护发展规划(说明书）.pdf，第48页",
     "sourceRef": "2先锋大街前锋大街保护发展规划(说明书）.pdf 第48页",
@@ -1539,21 +1536,21 @@ const STORIES = [
   },
   {
     "id": "story-020",
-    "title": "姜埋奶，一份可嵌入街区的甜品记忆",
+    "title": "姜撞奶，一份可嵌入街区的甜品记忆",
     "subtitle": "把“吃”变成理解地方生活的入口",
     "category": "美食记忆",
     "placeId": "ginger-milk",
-    "placeName": "姜埋奶",
+    "placeName": "姜撞奶",
     "address": "先锋社区经营业态待定",
     "timeLabel": "传统美食 / 当代活化",
     "period": "传统美食 / 当代活化",
     "storyteller": "官方规划资料整理",
-    "archiveDetail": "姜埋奶被列为与番禺同源的传统美食，并被规划鼓励嵌入先锋社区经营业态。",
+    "archiveDetail": "姜撞奶被列为与番禺同源的传统美食，并被规划鼓励嵌入先锋社区经营业态。",
     "historicalBasis": "依据《保护发展规划说明书》第49、67页。",
     "spatialDetail": "可进入非遗体验、社区食集或乐龄邻里茶点场景，但资料未给出具体点位。",
-    "visitorPrompt": "你会把姜埋奶放进儿童任务、乐龄茶点还是游客路线？",
+    "visitorPrompt": "你会把姜撞奶放进儿童任务、乐龄茶点还是游客路线？",
     "tags": [
-      "姜埋奶",
+      "姜撞奶",
       "传统美食",
       "社区食集"
     ],
@@ -1566,8 +1563,8 @@ const STORIES = [
     "imageStyle": "food-memory",
     "imageCaption": "CSS示意：温热甜品碗",
     "colorTheme": "market-gold",
-    "excerpt": "把“吃”变成理解地方生活的入口。姜埋奶被列为与番禺同源的传统美食，并被规划鼓励嵌入先锋社区经营业态。",
-    "fullText": "姜埋奶被列为与番禺同源的传统美食，并被规划鼓励嵌入先锋社区经营业态。可进入非遗体验、社区食集或乐龄邻里茶点场景，但资料未给出具体点位。给孩子和游客的问题是：你会把姜埋奶放进儿童任务、乐龄茶点还是游客路线？依据《保护发展规划说明书》第49、67页。",
+    "excerpt": "把“吃”变成理解地方生活的入口。姜撞奶被列为与番禺同源的传统美食，并被规划鼓励嵌入先锋社区经营业态。",
+    "fullText": "姜撞奶被列为与番禺同源的传统美食，并被规划鼓励嵌入先锋社区经营业态。可进入非遗体验、社区食集或乐龄邻里茶点场景，但资料未给出具体点位。给孩子和游客的问题是：你会把姜撞奶放进儿童任务、乐龄茶点还是游客路线？依据《保护发展规划说明书》第49、67页。",
     "visibility": "公开展示",
     "reviewStatus": "approved",
     "sourceNote": "官方规划资料：2先锋大街前锋大街保护发展规划(说明书）.pdf，第49、67页",
@@ -1910,44 +1907,6 @@ const STORIES = [
     "sourceNote": "社区展陈资料 + 历史信息整理：拾光源点•先锋社区 1.0.pdf；市桥复心计划2025.pdf，拾光源点第3页；复心计划第32页",
     "sourceRef": "拾光源点•先锋社区 1.0.pdf；市桥复心计划2025.pdf 拾光源点第3页；复心计划第32页",
     "legacyImageStyle": "skate"
-  },
-  {
-    "id": "story-030",
-    "title": "老城市新活力，不是把老街变新楼",
-    "subtitle": "让旧空间重新服务居民",
-    "category": "社区事件",
-    "placeId": "old-city-new-life",
-    "placeName": "先锋社区整体",
-    "address": "先锋社区",
-    "timeLabel": "当代更新",
-    "period": "当代",
-    "storyteller": "官方规划资料整理",
-    "archiveDetail": "规划定位为“大湾区广府文化传承发展示范区”“老城市新活力的番禺新样本”，并提出宜居社区、街区博物馆、广府文化体验街区。",
-    "historicalBasis": "依据《保护发展规划宣传册》第19-22页。",
-    "spatialDetail": "原先锋小学为核心，先锋大街为文创体验轴，前锋大街为商业活力轴，前锋十八巷为芳华记忆轴。",
-    "visitorPrompt": "你希望老街先变得更热闹，还是先变得更好住？",
-    "tags": [
-      "老城市新活力",
-      "宜居社区",
-      "街区博物馆",
-      "广府文化体验"
-    ],
-    "credibility": "high",
-    "sourceType": "官方规划资料",
-    "sourceFile": "4先锋大街前锋大街保护发展规划（宣传册）.pdf",
-    "sourcePage": "第19-22页",
-    "needsVerification": false,
-    "missingInfo": "",
-    "imageStyle": "community-future",
-    "imageCaption": "CSS示意：旧街区与新活动",
-    "colorTheme": "future-coral",
-    "excerpt": "让旧空间重新服务居民。规划定位为“大湾区广府文化传承发展示范区”“老城市新活力的番禺新样本”，并提出宜居社区、街区博物馆、广府文化体验街区。",
-    "fullText": "规划定位为“大湾区广府文化传承发展示范区”“老城市新活力的番禺新样本”，并提出宜居社区、街区博物馆、广府文化体验街区。原先锋小学为核心，先锋大街为文创体验轴，前锋大街为商业活力轴，前锋十八巷为芳华记忆轴。给孩子和游客的问题是：你希望老街先变得更热闹，还是先变得更好住？",
-    "visibility": "公开展示",
-    "reviewStatus": "approved",
-    "sourceNote": "官方规划资料：4先锋大街前锋大街保护发展规划（宣传册）.pdf，第19-22页",
-    "sourceRef": "4先锋大街前锋大街保护发展规划（宣传册）.pdf 第19-22页",
-    "legacyImageStyle": "night"
   }
 ];
 
@@ -1980,8 +1939,7 @@ const STORY_SOURCE_IMAGES = {
   "story-026": "assets/images/story-covers/story-026.jpg",
   "story-027": "assets/images/story-covers/story-027.jpg",
   "story-028": "assets/images/story-covers/story-028.jpg",
-  "story-029": "assets/images/story-covers/story-029.jpg",
-  "story-030": "assets/images/story-covers/story-030.jpg"
+  "story-029": "assets/images/story-covers/story-029.jpg"
 };
 
 const QUESTS = [
@@ -2060,9 +2018,7 @@ const QUESTS = [
     "points": 15,
     "theme": "画一张你希望的未来先锋社区：哪里适合儿童，哪里适合长者？",
     "sourceNote": "来自01项目简报和04内容规则儿童任务",
-    "relatedStoryIds": [
-      "story-030"
-    ]
+    "relatedStoryIds": []
   },
   {
     "id": "quest-fishbone-map",
@@ -2138,8 +2094,8 @@ const AGENT_QA = [
       "重要",
       "价值"
     ],
-    "answer": "先锋社区重要，是因为这里把市桥老城、水陆贸易、鱼骨状街巷、古民居、非遗美食和学校记忆放在同一个地方。资料把它称为老城市新活力的番禺新样本，也像一座可以继续补充的街区博物馆。",
-    "sourceNote": "来源：02知识库历史定位与规划定位章节"
+    "answer": "先锋社区重要，是因为这里把市桥老城、水陆贸易、鱼骨状街巷、非遗美食和学校记忆放在同一个地方。新的拾光源点资料把原先锋小学更新成校园新生场景：成长工场服务孩子，艺文生活服务青年和亲子，乐龄邻里服务长者，社区活动可以持续发生。",
+    "sourceNote": "来源：拾光源点•先锋社区 1.0.pdf"
   },
   {
     "question": "先锋大街和前锋大街是什么关系？",
@@ -2210,13 +2166,16 @@ const AGENT_QA = [
     "sourceNote": "来源：2说明书第42页；4宣传册第20页"
   },
   {
-    "question": "什么是老城市新活力？",
+    "question": "什么是校园新生？",
     "keywords": [
-      "老城市新活力",
+      "校园新生",
+      "成长工场",
+      "艺文生活",
+      "乐龄邻里",
       "新活力"
     ],
-    "answer": "简单说，就是不把老街抹掉，而是让老街重新服务居民。资料把先锋社区定位为宜居社区、街区博物馆和广府文化体验街区，这就是老空间里的新生活。",
-    "sourceNote": "来源：4宣传册第19页"
+    "answer": "校园新生就是把原先锋小学这样的旧校园空间重新变成社区生活场。拾光源点资料里，它包括1#成长工场、2#艺文生活、3#乐龄邻里，还有社区花园、社区舞台和活动广场，让孩子、青年、亲子家庭和长者都能在这里找到日常活动。",
+    "sourceNote": "来源：拾光源点•先锋社区 1.0.pdf"
   },
   {
     "question": "这个项目怎么保护隐私？",
