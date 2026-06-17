@@ -1539,6 +1539,10 @@ textarea::placeholder {
   font-weight: 520;
 }
 
+#storyteller {
+  min-height: 44px;
+}
+
 input:hover,
 select:hover,
 textarea:hover {
@@ -1788,22 +1792,29 @@ textarea {
   padding: var(--space-5);
 }
 
+.chat-panel {
+  border-color: rgba(197, 160, 89, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 252, 246, 0.66);
+}
+
 .chat-messages {
   display: grid;
-  gap: var(--space-3);
+  gap: 16px;
   max-height: 520px;
   min-height: 420px;
   overflow: auto;
-  padding: var(--space-3);
-  border: 1px solid rgba(80, 50, 30, 0.12);
-  border-radius: var(--radius);
-  background: rgba(251, 244, 232, 0.7);
+  padding: 22px;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(255, 252, 246, 0.46);
 }
 
 .message {
-  max-width: 78%;
-  padding: var(--space-3);
-  border-radius: var(--radius);
+  width: fit-content;
+  max-width: min(760px, 78%);
+  padding: 18px 22px;
+  border-radius: 18px;
 }
 
 .message strong {
@@ -1819,15 +1830,19 @@ textarea {
 
 .agent-message {
   justify-self: start;
-  background: #fff9f0;
+  background: rgba(255, 249, 240, 0.92);
   color: var(--ink);
-  border: 1px solid rgba(47, 111, 136, 0.16);
+  border: 1px solid rgba(47, 111, 136, 0.14);
 }
 
 .user-message {
   justify-self: end;
-  background: var(--river);
-  color: #fff;
+  max-width: min(520px, 72%);
+  padding: 14px 18px;
+  border: 1px solid rgba(47, 111, 136, 0.16);
+  border-radius: 18px;
+  background: rgba(213, 233, 240, 0.86);
+  color: var(--ink);
 }
 
 .chat-form {
@@ -2985,6 +3000,37 @@ button.home-story-card:hover {
   border-radius: 0;
   background-color: rgba(255, 255, 255, 0.76);
   box-shadow: var(--shadow-soft);
+}
+
+#agent .chat-panel,
+#agent .suggestion-panel {
+  border-radius: 18px;
+}
+
+#agent .chat-panel {
+  border-color: rgba(197, 160, 89, 0.2);
+  background: rgba(255, 252, 246, 0.66);
+}
+
+#agent .chat-messages {
+  border: 0;
+  border-radius: 18px;
+  background: rgba(255, 252, 246, 0.46);
+}
+
+#agent .message,
+#agent .chat-form input {
+  border-radius: 18px;
+}
+
+#agent .user-message {
+  width: fit-content;
+  max-width: min(520px, 72%);
+  padding: 14px 18px;
+  border: 1px solid rgba(47, 111, 136, 0.16);
+  border-radius: 18px;
+  background: rgba(213, 233, 240, 0.86);
+  color: var(--ink);
 }
 
 #submit .memory-form,
