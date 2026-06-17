@@ -3,7 +3,7 @@
 
 const DATA_VERSION = "xianfeng-memory-data-v2";
 const DATA_SUMMARY = {
-  "stories": 30,
+  "stories": 31,
   "places": 14,
   "timelineItems": 7,
   "quests": 12,
@@ -284,39 +284,39 @@ const PLACES = [
   },
   {
     "id": "xianfeng-school",
-    "name": "先锋小学",
-    "type": "学校旧址 / 社区核心",
-    "address": "先锋社区原先锋小学",
-    "shortIntro": "从谢氏文峰祠、文峰小学到先锋小学，承载教育记忆。",
-    "longIntro": "拾光源点资料说明原址为谢氏文峰祠，民国时期兴办文峰小学，1949年定名先锋小学；规划也将原先锋小学视作核心节点。",
+    "name": "先锋社区共创空间",
+    "type": "社区共创 / 当代运营",
+    "address": "先锋社区当代共享空间",
+    "shortIntro": "围绕成长工场、艺文生活、乐龄邻里展开的社区共创节点。",
+    "longIntro": "拾光源点资料将这一当代节点组织为成长工场、艺文生活、乐龄邻里等共享场景，用教育、社交、手作、康养与日常活动连接社区使用者。",
     "periodTags": [
       "民国",
       "建国初期",
       "当代"
     ],
     "categoryTags": [
-      "学校",
-      "儿童",
-      "社区核心"
+      "成长工场",
+      "艺文生活",
+      "乐龄邻里"
     ],
     "relatedStoryIds": [
       "story-016",
-      "story-025",
-      "story-029"
+      "story-029",
+      "story-030"
     ],
     "x": 71,
     "y": 35,
-    "sourceNote": "来源：拾光源点•先锋社区 1.0.pdf，第10页；2说明书第41页",
+    "sourceNote": "来源：拾光源点•先锋社区 1.0.pdf，第11-14页",
     "needsVerification": false,
-    "imageStyle": "old-school",
-    "intro": "从谢氏文峰祠、文峰小学到先锋小学，承载教育记忆。",
-    "period": "民国 / 建国初期 / 当代",
+    "imageStyle": "community-future",
+    "intro": "围绕成长工场、艺文生活、乐龄邻里展开的社区共创节点。",
+    "period": "当代",
     "tags": [
-      "学校",
-      "儿童",
-      "社区核心"
+      "成长工场",
+      "艺文生活",
+      "乐龄邻里"
     ],
-    "storyCount": 3
+    "storyCount": 2
   },
   {
     "id": "oyster-wall-cluster",
@@ -709,7 +709,6 @@ const TIMELINE_ITEMS = [
       "xianfeng-school"
     ],
     "relatedStoryIds": [
-      "story-016",
       "story-026"
     ],
     "tags": [
@@ -734,7 +733,7 @@ const TIMELINE_ITEMS = [
     ],
     "relatedStoryIds": [
       "story-013",
-      "story-016"
+      "story-013"
     ],
     "tags": [
       "建国初期",
@@ -779,28 +778,29 @@ const TIMELINE_ITEMS = [
   {
     "id": "tl-today",
     "period": "当代",
-    "title": "校园新生与社区共创",
-    "description": "拾光源点资料提出约3300平方米校园旧址更新，保留教室格局，导入成长工场、艺文生活、乐龄邻里、社区花园和活动广场。",
+    "title": "社区共创与当代生活场景",
+    "description": "拾光源点资料把当代空间组织为成长工场、艺文生活、乐龄邻里等共享模块，用儿童活动、手作课堂、社区食集、康养服务和日常交流串起新的社区生活。",
     "relatedPlaces": [
       "xianfeng-school"
     ],
     "relatedStoryIds": [
       "story-016",
-      "story-029"
+      "story-029",
+      "story-030"
     ],
     "tags": [
       "当代",
-      "校园新生",
+      "社区共创",
       "成长工场",
       "乐龄邻里"
     ],
-    "sourceNote": "来源：拾光源点•先锋社区 1.0.pdf，第11页",
+    "sourceNote": "来源：拾光源点•先锋社区 1.0.pdf，第11-14页",
     "needsVerification": false,
-    "theme": "校园新生与社区共创",
-    "clue": "总建筑面积约3300平方米，30-70平方米模块化教室空间，连接青少年教育、艺文生活、社区食集、健康康养与日常活动。",
+    "theme": "成长工场、艺文生活与乐龄邻里",
+    "clue": "以成长工场、艺文生活、乐龄邻里为主线，展示儿童运动、创意手作、社区餐饮、生活服务与健康康养等当代共创场景。",
     "placeId": "xianfeng-school",
-    "detailImage": "assets/images/timeline-contemporary-campus.jpg",
-    "detailImageLabel": "拾光源点 1.0 · 校园新生"
+    "detailImage": "",
+    "detailImageLabel": ""
   },
   {
     "id": "tl-future",
@@ -1387,40 +1387,40 @@ const STORIES = [
   },
   {
     "id": "story-016",
-    "title": "先锋小学，从文峰祠到社区新地标",
-    "subtitle": "教育记忆连接宗族祠堂、乡学和当代运营",
+    "title": "成长工场，把孩子们的日常活动放进社区",
+    "subtitle": "当代空间把运动、培训和亲子活动编进社区日常",
     "category": "学校记忆",
     "placeId": "xianfeng-school",
-    "placeName": "先锋小学旧址",
-    "address": "先锋社区原先锋小学",
-    "timeLabel": "民国至当代",
-    "period": "民国至当代",
+    "placeName": "成长工场",
+    "address": "先锋社区当代共享空间",
+    "timeLabel": "当代",
+    "period": "当代",
     "storyteller": "社区展陈资料整理",
-    "archiveDetail": "拾光源点资料称原址为谢氏文峰祠，民国时期兴办文峰小学，1949年定名先锋小学；后续计划保留教室格局。",
-    "historicalBasis": "依据《拾光源点•先锋社区 1.0》第10页，以及《保护发展规划说明书》第41页关于文峰小学和谢地中心的说明。",
-    "spatialDetail": "原先锋小学位于谢地正中，被规划视为社区核心节点，可承接成长工场、艺文生活、乐龄邻里。",
-    "visitorPrompt": "一所学校搬进社区记忆项目后，还能教什么？",
+    "archiveDetail": "拾光源点把当代空间中的 1# 模块定义为成长工场，承接青少年教育培训、自习室与运动体能等活动，让孩子们的日常学习和运动直接进入社区。",
+    "historicalBasis": "依据《拾光源点•先锋社区 1.0》第11-12页关于成长工场与模块化空间的说明。",
+    "spatialDetail": "成长工场强调面向儿童和青少年的高频使用场景，可延伸到轮滑、攀爬、培训、自习和亲子停留，形成持续发生的社区活力。",
+    "visitorPrompt": "如果把成长工场做成你每天都想来的地方，你最想先放进什么活动？",
     "tags": [
-      "先锋小学",
-      "文峰小学",
-      "文峰祠",
-      "教育"
+      "成长工场",
+      "儿童活动",
+      "教育培训",
+      "亲子"
     ],
     "credibility": "high",
-    "sourceType": "社区展陈资料 + 官方规划资料",
-    "sourceFile": "拾光源点•先锋社区 1.0.pdf；2先锋大街前锋大街保护发展规划(说明书）.pdf",
-    "sourcePage": "拾光源点第10页；说明书第41页",
+    "sourceType": "社区展陈资料",
+    "sourceFile": "拾光源点•先锋社区 1.0.pdf",
+    "sourcePage": "第11-12页",
     "needsVerification": false,
     "missingInfo": "",
-    "imageStyle": "old-school",
-    "imageCaption": "CSS示意：旧校园与操场线",
+    "imageStyle": "school-green",
+    "imageCaption": "拾光源点 1.0 · 当代社区共创拼图",
     "colorTheme": "school-green",
-    "excerpt": "教育记忆连接宗族祠堂、乡学和当代运营。拾光源点资料称原址为谢氏文峰祠，民国时期兴办文峰小学，1949年定名先锋小学；后续计划保留教室格局。",
-    "fullText": "拾光源点资料称原址为谢氏文峰祠，民国时期兴办文峰小学，1949年定名先锋小学；后续计划保留教室格局。原先锋小学位于谢地正中，被规划视为社区核心节点，可承接成长工场、艺文生活、乐龄邻里。给孩子和游客的问题是：一所学校搬进社区记忆项目后，还能教什么？",
+    "excerpt": "成长工场把儿童活动、教育培训和亲子停留放进社区日常。拾光源点把它作为当代共创空间的核心场景之一。",
+    "fullText": "拾光源点把当代空间中的 1# 模块定义为成长工场，承接青少年教育培训、自习室与运动体能等活动，让孩子们的日常学习和运动直接进入社区。它强调面向儿童和青少年的高频使用场景，可延伸到轮滑、攀爬、培训、自习和亲子停留，形成持续发生的社区活力。给孩子和游客的问题是：如果把成长工场做成你每天都想来的地方，你最想先放进什么活动？",
     "visibility": "公开展示",
     "reviewStatus": "approved",
-    "sourceNote": "社区展陈资料 + 官方规划资料：拾光源点•先锋社区 1.0.pdf；2先锋大街前锋大街保护发展规划(说明书）.pdf，拾光源点第10页；说明书第41页",
-    "sourceRef": "拾光源点•先锋社区 1.0.pdf；2先锋大街前锋大街保护发展规划(说明书）.pdf 拾光源点第10页；说明书第41页",
+    "sourceNote": "社区展陈资料：拾光源点•先锋社区 1.0.pdf，第11-12页",
+    "sourceRef": "拾光源点•先锋社区 1.0.pdf 第11-12页",
     "legacyImageStyle": "school"
   },
   {
@@ -1872,41 +1872,79 @@ const STORIES = [
   },
   {
     "id": "story-029",
-    "title": "全国轮滑之乡，孩子们的速度记忆",
-    "subtitle": "儿童运动连接非遗创新",
+    "title": "艺文生活，把手作和交流放进社区日常",
+    "subtitle": "工作坊、社交和文化活动共同组成当代社区内容",
     "category": "社区事件",
-    "placeId": "roller-skating",
-    "placeName": "全国轮滑之乡",
-    "address": "先锋小学及市桥相关空间",
+    "placeId": "xianfeng-school",
+    "placeName": "艺文生活",
+    "address": "先锋社区当代共享空间",
     "timeLabel": "当代",
     "period": "当代",
-    "storyteller": "社区展陈资料与历史信息整理",
-    "archiveDetail": "拾光源点称这里是全国轮滑之乡；复心计划提到先锋小学轮滑队参与轮滑凤舞创作。",
-    "historicalBasis": "依据《拾光源点•先锋社区 1.0》第3页和《市桥复心计划2025》第32页。",
-    "spatialDetail": "可与成长工场、运动体能、社区活动广场、三堂凤舞故事和儿童任务绑定。",
-    "visitorPrompt": "你会设计一条“轮滑记忆路线”吗？",
+    "storyteller": "社区展陈资料整理",
+    "archiveDetail": "拾光源点把 2# 模块定义为艺文生活，聚焦社交、文化艺术、工作坊与在地主理人等内容，把交流和创作活动组织进社区。",
+    "historicalBasis": "依据《拾光源点•先锋社区 1.0》第13页关于艺文生活的说明。",
+    "spatialDetail": "艺文生活强调轻交流和可参与场景，包括手作工坊、社区餐饮、文化课堂和日常社交停留。",
+    "visitorPrompt": "如果让你在这里待一个下午，你会先去手作工坊、餐饮空间，还是社交活动？",
     "tags": [
-      "轮滑",
-      "先锋小学",
-      "儿童",
-      "三堂凤舞"
+      "艺文生活",
+      "工作坊",
+      "社区餐饮",
+      "社交"
     ],
-    "credibility": "medium",
-    "sourceType": "社区展陈资料 + 历史信息整理",
-    "sourceFile": "拾光源点•先锋社区 1.0.pdf；市桥复心计划2025.pdf",
-    "sourcePage": "拾光源点第3页；复心计划第32页",
-    "needsVerification": true,
-    "missingInfo": "具体称号来源、年份和赛事成绩需补充。",
-    "imageStyle": "sports-memory",
-    "imageCaption": "CSS示意：轮滑路线和速度线",
-    "colorTheme": "sport-blue",
-    "excerpt": "儿童运动连接非遗创新。拾光源点称这里是全国轮滑之乡；复心计划提到先锋小学轮滑队参与轮滑凤舞创作。",
-    "fullText": "拾光源点称这里是全国轮滑之乡；复心计划提到先锋小学轮滑队参与轮滑凤舞创作。可与成长工场、运动体能、社区活动广场、三堂凤舞故事和儿童任务绑定。给孩子和游客的问题是：你会设计一条“轮滑记忆路线”吗？依据《拾光源点•先锋社区 1.0》第3页和《市桥复心计划2025》第32页。",
+    "credibility": "high",
+    "sourceType": "社区展陈资料",
+    "sourceFile": "拾光源点•先锋社区 1.0.pdf",
+    "sourcePage": "第13页",
+    "needsVerification": false,
+    "missingInfo": "",
+    "imageStyle": "community-future",
+    "imageCaption": "拾光源点 1.0 · 艺文生活",
+    "colorTheme": "future-coral",
+    "excerpt": "艺文生活把手作、餐饮、社交和文化活动放进社区日常，让停留和交流本身变成内容。",
+    "fullText": "拾光源点把 2# 模块定义为艺文生活，聚焦社交、文化艺术、工作坊与在地主理人等内容，把交流和创作活动组织进社区。它强调轻交流和可参与场景，包括手作工坊、社区餐饮、文化课堂和日常社交停留。给孩子和游客的问题是：如果让你在这里待一个下午，你会先去手作工坊、餐饮空间，还是社交活动？",
     "visibility": "公开展示",
     "reviewStatus": "approved",
-    "sourceNote": "社区展陈资料 + 历史信息整理：拾光源点•先锋社区 1.0.pdf；市桥复心计划2025.pdf，拾光源点第3页；复心计划第32页",
-    "sourceRef": "拾光源点•先锋社区 1.0.pdf；市桥复心计划2025.pdf 拾光源点第3页；复心计划第32页",
+    "sourceNote": "社区展陈资料：拾光源点•先锋社区 1.0.pdf，第13页",
+    "sourceRef": "拾光源点•先锋社区 1.0.pdf 第13页",
     "legacyImageStyle": "skate"
+  },
+  {
+    "id": "story-030",
+    "title": "乐龄邻里，把服务和康养放回社区中心",
+    "subtitle": "日常生活、健康养生和长者活动构成稳定使用场景",
+    "category": "社区事件",
+    "placeId": "xianfeng-school",
+    "placeName": "乐龄邻里",
+    "address": "先锋社区当代共享空间",
+    "timeLabel": "当代",
+    "period": "当代",
+    "storyteller": "社区展陈资料整理",
+    "archiveDetail": "拾光源点把 3# 模块定义为乐龄邻里，内容覆盖社区食集、中医理疗、健康养生、老年大学等高频日常服务。",
+    "historicalBasis": "依据《拾光源点•先锋社区 1.0》第14页关于乐龄邻里的说明。",
+    "spatialDetail": "乐龄邻里强调稳定、连续的日常使用，包括康养服务、生活服务、慢节奏交流与社区照护场景。",
+    "visitorPrompt": "如果把乐龄邻里做成每天都能来一次的地方，你最先补哪一种服务？",
+    "tags": [
+      "乐龄邻里",
+      "健康康养",
+      "中医理疗",
+      "老年大学"
+    ],
+    "credibility": "high",
+    "sourceType": "社区展陈资料",
+    "sourceFile": "拾光源点•先锋社区 1.0.pdf",
+    "sourcePage": "第14页",
+    "needsVerification": false,
+    "missingInfo": "",
+    "imageStyle": "community-future",
+    "imageCaption": "拾光源点 1.0 · 乐龄邻里",
+    "colorTheme": "future-coral",
+    "excerpt": "乐龄邻里把社区食集、康养服务和长者活动放到同一组日常场景里，形成稳定的社区使用节奏。",
+    "fullText": "拾光源点把 3# 模块定义为乐龄邻里，内容覆盖社区食集、中医理疗、健康养生、老年大学等高频日常服务。它强调稳定、连续的日常使用，包括康养服务、生活服务、慢节奏交流与社区照护场景。给孩子和游客的问题是：如果把乐龄邻里做成每天都能来一次的地方，你最先补哪一种服务？",
+    "visibility": "公开展示",
+    "reviewStatus": "approved",
+    "sourceNote": "社区展陈资料：拾光源点•先锋社区 1.0.pdf，第14页",
+    "sourceRef": "拾光源点•先锋社区 1.0.pdf 第14页",
+    "legacyImageStyle": "community"
   }
 ];
 
@@ -1926,7 +1964,7 @@ const STORY_SOURCE_IMAGES = {
   "story-013": "assets/images/story-covers/story-013.jpg",
   "story-014": "assets/images/story-covers/story-014.jpg",
   "story-015": "assets/images/story-covers/story-015.jpg",
-  "story-016": "assets/images/story-covers/story-016.jpg",
+  "story-016": "assets/images/contemporary-growth-space.png",
   "story-017": "assets/images/story-covers/story-017.jpg",
   "story-018": "assets/images/story-covers/story-018.jpg",
   "story-019": "assets/images/story-covers/story-019.jpg",
@@ -1939,7 +1977,8 @@ const STORY_SOURCE_IMAGES = {
   "story-026": "assets/images/story-covers/story-026.jpg",
   "story-027": "assets/images/story-covers/story-027.jpg",
   "story-028": "assets/images/story-covers/story-028.jpg",
-  "story-029": "assets/images/story-covers/story-029.jpg"
+  "story-029": "assets/images/contemporary-artlife-13.png",
+  "story-030": "assets/images/contemporary-elder-14.png"
 };
 
 const QUESTS = [
@@ -2056,7 +2095,7 @@ const QUESTS = [
     "relatedStoryIds": [
       "story-001",
       "story-009",
-      "story-016",
+      "story-013",
       "story-013",
       "story-017"
     ]

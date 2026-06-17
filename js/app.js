@@ -119,7 +119,7 @@ function renderHomeStoryPreview(item) {
   const relatedStories = item.relatedStoryIds
     .map((storyId) => STORIES.find((story) => story.id === storyId))
     .filter(Boolean)
-    .slice(0, 2);
+    .slice(0, 3);
 
   const storyCards = relatedStories.map((story, index) => `
     <button class="home-story-card" type="button" data-home-story-id="${story.id}">

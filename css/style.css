@@ -3055,9 +3055,10 @@ button.home-story-card:hover {
   width: 100%;
   height: 100%;
   min-height: inherit;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   transition: transform 0.45s ease;
+  background: #f3ede5;
 }
 
 .story-card:hover .story-source-image img {
@@ -3084,7 +3085,7 @@ button.home-story-card:hover {
 }
 
 .story-detail-cover.story-source-image img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .story-detail-cover.story-source-image figcaption {
@@ -3572,9 +3573,10 @@ button.home-story-card:hover {
 .home-period-image-card img {
   width: 100%;
   height: 148px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
   filter: saturate(0.92) contrast(1.02);
+  background: #f3ede5;
 }
 
 .home-period-image-card > span {
