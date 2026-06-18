@@ -71,6 +71,20 @@ http://localhost:8000
 3. 如果仓库根目录就是本项目，选择 root。
 4. 如果放在子目录，可用 GitHub Actions 或把内容移动到 Pages 发布目录。
 
+### Cloudflare Pages
+
+1. 在 Cloudflare 注册或登录。
+2. 创建一个新的 Pages 项目。
+3. 连接到 GitHub 仓库 `Katherine1919/xianfengMemory`。
+4. 设置框架预设为 `None` 或 `Static Site`。
+5. Build command 留空。
+6. Build output directory 选择根目录 `.`。
+7. 在仓库 Settings -> Secrets -> Actions 中添加以下 secret：
+   - `CLOUDFLARE_API_TOKEN`
+   - `CLOUDFLARE_ACCOUNT_ID`
+8. 在 `.github/workflows/cloudflare-pages.yml` 中把 `projectName: YOUR_CLOUDFLARE_PAGES_PROJECT_NAME` 替换为你的 Pages 项目名称。
+9. 推送到 `master` 分支后，GitHub Actions 会自动部署。
+
 ## Demo 功能清单
 
 - 首页强视觉 Hero 和项目能力概览
